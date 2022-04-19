@@ -1,13 +1,13 @@
 package Algorithm;
-
+// LIFO(Last In First Out) 후입선출 방식의 자료구조
 public class ArrayStack {
     int top;
     int size;
-    int[] stack;
+    int[] arrayStack;
 
     public ArrayStack(int size) {
         this.size = size;
-        stack = new int[size];
+        arrayStack = new int[size];
         top = -1;
     }
 
@@ -32,8 +32,8 @@ public class ArrayStack {
             System.out.println("Stack is Full.");
             return;
         }
-        stack[++top] = item;
-        System.out.println(stack[top] + " Push");
+        arrayStack[++top] = item;
+        System.out.println(arrayStack[top] + " Push");
     }
 
     public void pop() {
@@ -42,11 +42,11 @@ public class ArrayStack {
             System.out.println("Stack is Empty.");
             return;
         }
-        System.out.println(stack[top] + " Pop");
+        System.out.println(arrayStack[top] + " Pop");
         top--;
     }
 
     public void peek() {
-        System.out.println(stack[top] + " Peek");
+        System.out.println(arrayStack[top] + " Peek");
     }
 }
